@@ -1,2 +1,2 @@
-# code-for-site-f1r-py
-Sample codes for using api shadow f1r
+# exsample-py-f1r
+Example of using a web service Web site with Python
