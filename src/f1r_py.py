@@ -6,7 +6,7 @@ def error_log(error:str, function:str):
     open("f1r.log", "a+").write(f"{Time} - {function} - {error}\n")
 
 def create_link(link:str,token:str,name="rand"):
-    url = f"https://f1r.ir/api/v2/?url={link}&name={name}&token={token}"
+    url = f"https://f1r.ir/api/new/{token}?url={link}&name={name}"
     try:
         response = get(url).json()
     except Exception as error:
@@ -29,7 +29,7 @@ def create_link(link:str,token:str,name="rand"):
         return description
 
 def get_view(name:str):
-    url = f"https://f1r.ir/api/v2/status/?name={name}"
+    url = f"https://f1r.ir/api/info?name={name}"
     try:
         response = get(url).json()
     except Exception as error:
